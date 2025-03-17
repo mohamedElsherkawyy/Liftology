@@ -1,0 +1,123 @@
+User: hi
+Assistant: {'assistant_response': "Hello, I'm happy to help you with your fitness journey. To get started, could you please provide me with some basic information about yourself? What is your name, age, height, and weight?", 'user_info': {'name': None, 'age': None, 'height': None, 'weight': None, 'BMI': None, 'message': {...}}}
+
+User: hi
+Assistant: {'assistant_response': "Hello, I'm happy to help you with your fitness journey. To get started, could you please provide me with some basic information about yourself? What is your name, age, height, and weight?", 'user_info': {'name': None, 'age': None, 'height': None, 'weight': None, 'BMI': None}}
+
+User: hi
+Assistant: {'assistant_response': "Hello, I'm happy to help you with your fitness journey. To get started, could you please provide me with some basic information about yourself? What is your name, age, height, and weight?", 'user_info': {'name': None, 'age': None, 'height': None, 'weight': None, 'BMI': None, 'message': {...}}}
+
+User: hi
+Assistant: {'assistant_response': "Hello, I'm happy to help you with your fitness journey. To get started, could you please provide me with some basic information about yourself? What is your name, age, height, and weight?", 'user_info': {'name': None, 'age': None, 'height': None, 'weight': None, 'BMI': None}}
+
+User: hi
+Assistant: {'assistant_response': "Hello, I'm happy to help you with your fitness journey. To get started, could you please provide me with some basic information about yourself? What is your name, age, height, and weight?", 'user_info': {'name': None, 'age': None, 'height': None, 'weight': None, 'BMI': None}}
+
+User: hi
+Assistant: {'assistant_response': "Hello, I'm happy to help you with your fitness journey. To get started, could you please provide me with some basic information about yourself? What is your name, age, height, and weight?", 'user_info': {'name': None, 'age': None, 'height': None, 'weight': None, 'BMI': None}}
+
+User: hi
+Assistant: {'assistant_response': "Hello, I'm happy to help you with your fitness journey. To get started, could you please provide me with some basic information about yourself? What is your name, age, height, and weight?", 'user_info': {'name': None, 'age': None, 'height': None, 'weight': None, 'BMI': None}}
+
+User: hi
+Assistant: {'assistant_response': 'To better understand your fitness needs, could you please provide some personal details? What is your name?', 'user_info': {'fitness_goal': 'Muscle gain', 'fitness_level': 'Intermediate', 'workout_time': '1 hour', 'health_restrictions': 'No injuries, focus on arms and chest', 'name': None, 'age': None, 'height': None, 'weight': None, 'BMI': None}}
+
+User: hi
+Assistant: {'assistant_response': 'To better assist you, could you please provide some personal details? What is your name?', 'user_info': {'fitness_goal': 'Muscle gain', 'current_fitness_level': 'Intermediate', 'workout_time': '1 hour', 'health_restrictions': 'No injuries, focus on arms and chest', 'name': '', 'age': '', 'height': '', 'weight': '', 'BMI': ''}}
+
+User: hi
+Assistant: {'assistant_response': 'Hello! To create a personalized fitness plan, I need to know some information about you. Can you please tell me your name, age, height, and weight?', 'user_info': {'name': None, 'age': None, 'height': None, 'weight': None, 'fitness_goal': None, 'fitness_level': None, 'bmi': None}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Could you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': '', 'bmi': ''}}
+
+User: mohamed
+Assistant: {'message': 'Hello Mohamed! To create a personalized fitness plan, I need to know your age, height, and weight. Could you please tell me your age?', 'user_info': {'name': 'Mohamed', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': '', 'bmi': ''}}
+
+User: 187 , 21 , 86
+Assistant: {'message': 'Hello Mohamed! To confirm, you are 21 years old, 187 cm tall, and weigh 86 kg. I will now calculate your BMI. Your BMI is approximately 24.7, which falls within the normal weight range. Next, could you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'fitness_goal': '', 'fitness_level': '', 'bmi': '24.7'}}
+
+User: muscle gain
+Assistant: {'message': 'Great, Mohamed! Your fitness goal is muscle gain. Next, could you please tell me your current fitness level? (e.g., beginner, intermediate, advanced)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'fitness_goal': 'muscle gain', 'fitness_level': '', 'bmi': '24.7'}}
+
+User: beginner
+Assistant: {'message': "Great, Mohamed! Your fitness goal is muscle gain and you're a beginner. Based on your information, I'll create a customized exercise plan for you. As a beginner with a muscle gain goal, I recommend starting with 3-4 times of weight training per week, focusing on compound exercises such as squats, deadlifts, and bench press. Additionally, include cardio exercises 2-3 times a week for 20-30 minutes. Aim to eat a calorie-surplus diet with a balance of protein, carbohydrates, and healthy fats. Here's a sample workout plan: Monday (Chest and Triceps): Barbell Bench Press (3 sets of 8-12 reps), Incline Dumbbell Press (3 sets of 10-15 reps), Tricep Pushdown (3 sets of 10-12 reps). Wednesday (Back and Biceps): Pull-ups (3 sets of 8-12 reps), Barbell Rows (3 sets of 8-12 reps), Dumbbell Bicep Curls (3 sets of 10-12 reps). Friday (Legs and Shoulders): Squats (3 sets of 8-12 reps), Leg Press (3 sets of 10-12 reps), Standing Military Press (3 sets of 8-12 reps). Remember to start with lighter weights and gradually increase the weight as you become stronger. Also, make sure to warm up before each workout and stretch afterwards.", 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'fitness_goal': 'muscle gain', 'fitness_level': 'beginner', 'bmi': '24.7'}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Can you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': '', 'bmi': ''}}
+
+User: 187 , 84 , 21 , mohamed motaz
+Assistant: {'message': 'Hello Mohamed Motaz! Thank you for providing your information. I have calculated your BMI: 24.35. Now, can you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed Motaz', 'age': '21', 'height': '187', 'weight': '84', 'fitness_goal': '', 'fitness_level': '', 'bmi': '24.35'}}
+
+User: muscle gain
+Assistant: {'message': "Great, Mohamed Motaz! You've chosen muscle gain as your fitness goal. Now, can you please tell me your current fitness level? (e.g., beginner, intermediate, advanced)", 'user_info': {'name': 'Mohamed Motaz', 'age': '21', 'height': '187', 'weight': '84', 'fitness_goal': 'muscle gain', 'fitness_level': '', 'bmi': '24.35'}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Could you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: mohamed motaz , 21 , 186 , 84
+Assistant: {'message': 'Hello Mohamed Motaz! Thank you for providing your details. I have calculated your BMI as 24.3, which falls within the normal weight range. Now, could you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed Motaz', 'age': '21', 'height': '186', 'weight': '84', 'fitness_goal': '', 'fitness_level': '', 'bmi': '24.3'}, 'exercise_plan': {}}
+
+User: muscle gain
+Assistant: {'message': "Great, Mohamed Motaz! You've chosen muscle gain as your fitness goal. Now, could you please tell me your current fitness level? (e.g., beginner, intermediate, advanced)", 'user_info': {'name': 'Mohamed Motaz', 'age': '21', 'height': '186', 'weight': '84', 'fitness_goal': 'muscle gain', 'fitness_level': '', 'bmi': '24.3'}, 'exercise_plan': {}}
+
+User: beginner
+Assistant: {'message': "Great, Mohamed Motaz! You've chosen beginner as your fitness level. Based on your details, I've created a customized exercise plan for you to achieve your muscle gain goal.", 'user_info': {'name': 'Mohamed Motaz', 'age': '21', 'height': '186', 'weight': '84', 'fitness_goal': 'muscle gain', 'fitness_level': 'beginner', 'bmi': '24.3'}, 'exercise_plan': {'warm_up': '5-10 minutes of cardio (jogging, jumping jacks, etc.)', 'monday': {'chest': 'Barbell Bench Press (3 sets of 8-12 reps), Incline Dumbbell Press (3 sets of 10-15 reps)', 'triceps': 'Tricep Pushdown (3 sets of 10-12 reps), Overhead Dumbbell Extension (3 sets of 12-15 reps)'}, 'tuesday': {'back': 'Pull-ups (3 sets of 8-12 reps), Barbell Rows (3 sets of 8-12 reps)', 'biceps': 'Dumbbell Bicep Curls (3 sets of 10-12 reps), Hammer Curls (3 sets of 10-12 reps)'}, 'wednesday': 'Rest day', 'thursday': {'legs': 'Squats (3 sets of 8-12 reps), Leg Press (3 sets of 10-12 reps)', 'shoulders': 'Dumbbell Shoulder Press (3 sets of 8-12 reps), Lateral Raises (3 sets of 10-12 reps)'}, 'friday': {'core': 'Plank (3 sets of 30-60 seconds), Russian Twists (3 sets of 10-12 reps)'}, 'saturday': 'Rest day', 'sunday': 'Rest day', 'nutrition': "Ensure you're consuming a calorie-surplus diet with a balance of protein, carbohydrates, and healthy fats to support muscle growth."}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Could you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': '', 'bmi': ''}, 'exercise_plan': {}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Could you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: hi
+Assistant: {'message': "Hello! I'd be happy to help you with your fitness journey. To get started, could you please provide me with some basic information about yourself? What is your name?", 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Could you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: mohamed , 186 , 84 , 21
+Assistant: {'message': 'Hello Mohamed! Thank you for providing your details. I have calculated your BMI: 24.3, which falls into the normal weight category. Now, could you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '84', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: muscle gain
+Assistant: {'message': "Great, Mohamed! You've chosen muscle gain as your fitness goal. Now, could you please tell me your current fitness level? (e.g., beginner, intermediate, advanced)", 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '84', 'fitness_goal': 'muscle gain', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: beginner
+Assistant: {'message': "Great, Mohamed! You've chosen beginner as your current fitness level. Based on your details, I've created a customized exercise plan for you to achieve your muscle gain goal.", 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '84', 'fitness_goal': 'muscle gain', 'fitness_level': 'beginner'}, 'exercise_plan': {'warm_up': '5-10 minutes of cardio (jogging, jumping jacks, etc.)', 'monday': {'chest': 'Barbell Bench Press (3 sets of 8-12 reps), Incline Dumbbell Press (3 sets of 10-15 reps)', 'triceps': 'Tricep Pushdown (3 sets of 10-12 reps), Overhead Dumbbell Extension (3 sets of 12-15 reps)'}, 'tuesday': {'back': 'Pull-ups (3 sets of 8-12 reps), Barbell Rows (3 sets of 8-12 reps)', 'biceps': 'Dumbbell Bicep Curls (3 sets of 10-12 reps), Hammer Curls (3 sets of 10-12 reps)'}, 'wednesday': 'Rest day', 'thursday': {'legs': 'Squats (3 sets of 8-12 reps), Leg Press (3 sets of 10-12 reps)', 'shoulders': 'Dumbbell Shoulder Press (3 sets of 8-12 reps), Lateral Raises (3 sets of 10-12 reps)'}, 'friday': {'cardio': '30 minutes of steady-state cardio (jogging, cycling, etc.)'}, 'saturday': 'Rest day', 'sunday': 'Rest day', 'nutrition': "Ensure you're consuming a calorie-surplus diet with a balance of protein, carbohydrates, and healthy fats to support muscle growth."}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Could you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: mohamed , 186 ,21 , 85
+Assistant: {'message': 'Hello Mohamed! Thank you for providing your details. Based on your height (186 cm) and weight (85 kg), your BMI is approximately 24.5, which falls within the normal weight range. Now, could you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '85', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Can you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'BMI': ''}, 'exercise_plan': {}}
+
+User: mohamed , 186 ,21 , 85
+Assistant: {'message': 'Hello Mohamed! Thank you for providing your details. I have calculated your BMI as follows: BMI = weight (kg) / height (m)^2 = 85 kg / (1.86 m)^2 = 24.4. Now, can you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '85', 'BMI': '24.4'}, 'exercise_plan': {}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Could you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'BMI': ''}, 'exercise_plan': {}}
+
+User: mohamed , 186 ,21 , 85
+Assistant: {'message': 'Hello Mohamed! Thank you for providing your details. I have calculated your BMI as follows: BMI = weight (kg) / height (m)^2 = 85 kg / (1.86 m)^2 = 24.4. Now, could you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '85', 'BMI': '24.4'}, 'exercise_plan': {}}
+
+User: muscle gain
+Assistant: {'message': "Great, Mohamed! You've chosen muscle gain as your main fitness goal. Now, could you please tell me your current fitness level? (e.g., beginner, intermediate, advanced)", 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '85', 'BMI': '24.4', 'fitness_goal': 'muscle gain'}, 'exercise_plan': {}}
+
+User: beginner
+Assistant: {'message': "Great, Mohamed! You've chosen beginner as your current fitness level. Based on your details, I've created a customized exercise plan for you to achieve your muscle gain goal.", 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '85', 'BMI': '24.4', 'fitness_goal': 'muscle gain', 'fitness_level': 'beginner'}, 'exercise_plan': {'warm_up': '5-10 minutes of cardio (jogging, jumping jacks, etc.)', 'monday': {'chest': 'barbell bench press (3 sets of 8-12 reps), incline dumbbell press (3 sets of 10-15 reps)', 'triceps': 'tricep pushdown (3 sets of 10-12 reps), overhead dumbbell extension (3 sets of 12-15 reps)'}, 'tuesday': {'back': 'pull-ups (3 sets of 8-12 reps), barbell rows (3 sets of 8-12 reps)', 'biceps': 'dumbbell curls (3 sets of 10-12 reps), hammer curls (3 sets of 10-12 reps)'}, 'wednesday': 'rest day', 'thursday': {'legs': 'squats (3 sets of 8-12 reps), leg press (3 sets of 10-12 reps)', 'shoulders': 'dumbbell shoulder press (3 sets of 8-12 reps), lateral raises (3 sets of 10-12 reps)'}, 'friday': {'core': 'plank (3 sets of 30-60 seconds), russian twists (3 sets of 10-12 reps)'}, 'saturday': 'rest day', 'sunday': 'rest day', 'nutrition': "ensure you're consuming a caloric surplus of 250-500 calories above your maintenance level, with a macronutrient breakdown of 1.6-2.2 grams of protein per kilogram of body weight, 2-3 grams of carbohydrates per kilogram of body weight, and 0.5-1 gram of healthy fats per kilogram of body weight"}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Could you please tell me your name, age, height, and weight?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'BMI': ''}, 'exercise_plan': {}}
+
+User: mohamed , 186 ,21 , 85
+Assistant: {'message': 'Hello Mohamed! Thank you for providing your details. I have calculated your BMI as follows: BMI = weight (kg) / height (m)^2 = 85 kg / (1.86 m)^2 = 24.4. Now, could you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '85', 'BMI': '24.4'}, 'exercise_plan': {}}
+
+User: muscle
+Assistant: {'message': 'Great, Mohamed! Your main fitness goal is muscle gain. Now, could you please tell me your current fitness level? (e.g., beginner, intermediate, advanced)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '85', 'BMI': '24.4', 'fitness_goal': 'muscle gain'}, 'exercise_plan': {}}
+
+User: intermediate
+Assistant: {'message': 'Great, Mohamed! Your current fitness level is intermediate. Based on your details, I have created a customized exercise plan for you. Please find it below.', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '186', 'weight': '85', 'BMI': '24.4', 'fitness_goal': 'muscle gain', 'fitness_level': 'intermediate'}, 'exercise_plan': {'Monday': {'Chest': ['Barbell Bench Press (3 sets of 8-12 reps)', 'Incline Dumbbell Press (3 sets of 10-15 reps)', 'Cable Fly (3 sets of 12-15 reps)'], 'Triceps': ['Tricep Pushdown (3 sets of 10-12 reps)', 'Overhead Dumbbell Extension (3 sets of 12-15 reps)', 'Skull Crusher (3 sets of 8-10 reps)']}, 'Tuesday': {'Back': ['Pull-up (3 sets of 8-12 reps)', 'Barbell Row (3 sets of 8-12 reps)', 'Lat Pulldown (3 sets of 10-12 reps)'], 'Biceps': ['Dumbbell Curl (3 sets of 10-12 reps)', 'Hammer Curl (3 sets of 10-12 reps)', 'Preacher Curl (3 sets of 10-12 reps)']}, 'Wednesday': 'Rest day', 'Thursday': {'Legs': ['Squats (3 sets of 8-12 reps)', 'Leg Press (3 sets of 10-12 reps)', 'Lunges (3 sets of 10-12 reps per leg)'], 'Shoulders': ['Dumbbell Shoulder Press (3 sets of 8-12 reps)', 'Lateral Raise (3 sets of 10-12 reps)', 'Rear Delt Fly (3 sets of 12-15 reps)']}, 'Friday': {'Cardio': ['Treadmill (30 minutes at moderate intensity)', 'Stationary Bike (30 minutes at moderate intensity)', 'Rowing Machine (30 minutes at moderate intensity)']}, 'Saturday': 'Rest day', 'Sunday': 'Rest day'}}
+
