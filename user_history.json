@@ -1,59 +1,12 @@
 {
     "user_info": {
-        "name": "Mohamed",
-        "age": "21",
-        "height": "186",
-        "weight": "85",
-        "BMI": "24.4",
-        "fitness_goal": "muscle gain",
-        "fitness_level": "intermediate"
+        "name": "",
+        "age": "",
+        "height": "",
+        "weight": "",
+        "fitness_goal": "",
+        "fitness_level": "",
+        "BMI": ""
     },
-    "exercise_plan": {
-        "Monday": {
-            "Chest": [
-                "Barbell Bench Press (3 sets of 8-12 reps)",
-                "Incline Dumbbell Press (3 sets of 10-15 reps)",
-                "Cable Fly (3 sets of 12-15 reps)"
-            ],
-            "Triceps": [
-                "Tricep Pushdown (3 sets of 10-12 reps)",
-                "Overhead Dumbbell Extension (3 sets of 12-15 reps)",
-                "Skull Crusher (3 sets of 8-10 reps)"
-            ]
-        },
-        "Tuesday": {
-            "Back": [
-                "Pull-up (3 sets of 8-12 reps)",
-                "Barbell Row (3 sets of 8-12 reps)",
-                "Lat Pulldown (3 sets of 10-12 reps)"
-            ],
-            "Biceps": [
-                "Dumbbell Curl (3 sets of 10-12 reps)",
-                "Hammer Curl (3 sets of 10-12 reps)",
-                "Preacher Curl (3 sets of 10-12 reps)"
-            ]
-        },
-        "Wednesday": "Rest day",
-        "Thursday": {
-            "Legs": [
-                "Squats (3 sets of 8-12 reps)",
-                "Leg Press (3 sets of 10-12 reps)",
-                "Lunges (3 sets of 10-12 reps per leg)"
-            ],
-            "Shoulders": [
-                "Dumbbell Shoulder Press (3 sets of 8-12 reps)",
-                "Lateral Raise (3 sets of 10-12 reps)",
-                "Rear Delt Fly (3 sets of 12-15 reps)"
-            ]
-        },
-        "Friday": {
-            "Cardio": [
-                "Treadmill (30 minutes at moderate intensity)",
-                "Stationary Bike (30 minutes at moderate intensity)",
-                "Rowing Machine (30 minutes at moderate intensity)"
-            ]
-        },
-        "Saturday": "Rest day",
-        "Sunday": "Rest day"
-    }
+    "exercise_plan": {}
 }
