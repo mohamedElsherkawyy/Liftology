@@ -8,6 +8,8 @@ from langchain.memory import ConversationBufferMemory
 from langchain.prompts import ChatPromptTemplate
 import warnings
 import re
+
+from config import USER_INFORAMTION
 warnings.filterwarnings('ignore')
 load_dotenv()
 
@@ -37,8 +39,9 @@ keep the questions direct and concise, asking only for the required details with
 system_message = """
 You are a helpful fitness assistant. 
 Ask about each section separately.
+
 Move to the next section only when the user has provided all the required details in the current section.
-make sure the response is one big JSON object contains two main keys: the first key is the "message" and the second key is the "user_info" to extract user_info and the third key is "exercise_plan" to store in it the exercises.
+make sure the response is one big JSON object contains three main keys: the first key is the "message" and the second key is the "user_info" to extract user_info and the third key is "exercise_plan" to store in it the exercises.
 
 Ask the users about their name, age, height, weight and calculate the BMI based on BMI predict BMI_case ,fitness goal , fitness level,  and save it in user_info.
 
@@ -50,7 +53,10 @@ User: "Muscle gain"
 Chatbot: "Great! What is your current fitness level? (e.g., beginner, intermediate, advanced)"
 User: "Intermediate"
 
-when he answers all the questions make to him a customized Exercise plan with a nutrition tip and make this exercise plan in a json format 
+### Instructions
+- when he answers all the questions make to him a reasonable customized Exercise plan with a nutrition tip based on his BMI, fitness goal , fitness level.
+- use this object as a reference to fill the keys {object}.
+- this reference {object} you can adjust the days name and you can make some of the days rest day.
 
 Text : {text}
 in Style : {style}
@@ -99,7 +105,7 @@ def chat():
         if not user_input:
             return jsonify({"error": "No user input provided"}), 400
 
-        user_messages = conversation_prompt_template.format_messages(style=style, text=user_input)
+        user_messages = conversation_prompt_template.format_messages(style=style, text=user_input , object = USER_INFORAMTION)
 
         response = conversation.run(input=user_messages[0].content)
         if isinstance(response, str):
