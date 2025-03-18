@@ -1,3 +1,45 @@
 User: hi
 Assistant: {'message': "Hello! I'm excited to help you with your fitness journey. To get started, could you please tell me your name, age, height, and weight? This information will help me create a personalized plan for you.", 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': '', 'BMI': ''}, 'exercise_plan': {}}
 
+User: hi
+Assistant: {'message': "Hello! I'm excited to help you with your fitness journey. To create a personalized plan, I need to know some details about you. Can you please tell me your name?", 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': '', 'BMI': ''}, 'exercise_plan': {}}
+
+User: mohamed , 21 , 187 , 86
+Assistant: {'message': "Hello Mohamed! I'm excited to help you with your fitness journey. You've provided your name, age, height, and weight. Next, can you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)", 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'fitness_goal': '', 'fitness_level': '', 'BMI': ''}, 'exercise_plan': {}}
+
+User: muscle
+Assistant: {'message': 'Great, Mohamed! Your main fitness goal is muscle gain. Next, can you please tell me your current fitness level? (e.g., beginner, intermediate, advanced)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'fitness_goal': 'muscle gain', 'fitness_level': '', 'BMI': ''}, 'exercise_plan': {}}
+
+User: intermediate
+Assistant: {'message': "Great, Mohamed! Your current fitness level is intermediate. I've calculated your BMI based on your height and weight. Now, I have all the necessary information to create a personalized exercise plan for you.", 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'fitness_goal': 'muscle gain', 'fitness_level': 'intermediate', 'BMI': '24.8'}, 'exercise_plan': {'monday': {'exercise1': 'Bench Press', 'sets': '3', 'reps': '8-12', 'weight': '70-80kg'}, 'tuesday': {'exercise1': 'Pull-ups', 'sets': '3', 'reps': '8-12', 'weight': 'bodyweight'}, 'wednesday': {'exercise1': 'Squats', 'sets': '3', 'reps': '8-12', 'weight': '80-90kg'}, 'thursday': {'exercise1': 'Lunges', 'sets': '3', 'reps': '8-12', 'weight': '60-70kg'}, 'friday': {'exercise1': 'Deadlifts', 'sets': '3', 'reps': '8-12', 'weight': '80-90kg'}, 'nutrition_tip': 'To support muscle gain, make sure to consume 1.6-2.2 grams of protein per kilogram of body weight daily, and aim for a caloric surplus of 250-500 calories above your maintenance level.'}}
+
+User: hi
+Assistant: {'message': "Hello! I'd be happy to help you with your fitness journey. To get started, could you please tell me your name, age, height, and weight? This information will help me create a personalized plan for you.", 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'fitness_goal': '', 'fitness_level': '', 'BMI': ''}, 'exercise_plan': {}}
+
+User: mohamed , 21 , 187 , 86
+Assistant: {'message': 'Hello Mohamed! Thank you for providing your name, age, height, and weight. Now, could you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'fitness_goal': '', 'fitness_level': '', 'BMI': ''}, 'exercise_plan': {}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Can you please tell me your name?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'BMI': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: mohamed , 21 , 187 , 86
+Assistant: {'message': 'Hello Mohamed! Thank you for providing your details. Your height is 187 cm and your weight is 86 kg, so your BMI is approximately 24.6, which falls into the normal weight category. Now, can you please tell me your main fitness goal? (e.g., weight loss, muscle gain, endurance)', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'BMI': '24.6', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: hi
+Assistant: {'message': 'Hello! To create a personalized fitness plan, I need to know some information about you. Can you please tell me your name?', 'user_info': {'name': '', 'age': '', 'height': '', 'weight': '', 'BMI': '', 'BMI_case': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: mohamed
+Assistant: {'message': 'Hello Mohamed! To create a personalized fitness plan, I need to know your age. Can you please tell me how old you are?', 'user_info': {'name': 'Mohamed', 'age': '', 'height': '', 'weight': '', 'BMI': '', 'BMI_case': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: 21
+Assistant: {'message': 'Great, Mohamed! You are 21 years old. To create a personalized fitness plan, I need to know your height in centimeters. Can you please tell me how tall you are?', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '', 'weight': '', 'BMI': '', 'BMI_case': '', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: 187 , 86
+Assistant: {'message': 'Great, Mohamed! You are 21 years old, 187 cm tall, and weigh 86 kg. Your BMI is 24.8, which falls into the normal weight category. To create a personalized fitness plan, I need to know your main fitness goal. Is it weight loss, muscle gain, or endurance?', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'BMI': '24.8', 'BMI_case': 'Normal weight', 'fitness_goal': '', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: muscle gain
+Assistant: {'message': 'Great, Mohamed! Your main fitness goal is muscle gain. To create a personalized fitness plan, I need to know your current fitness level. Is it beginner, intermediate, or advanced?', 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'BMI': '24.8', 'BMI_case': 'Normal weight', 'fitness_goal': 'Muscle gain', 'fitness_level': ''}, 'exercise_plan': {}}
+
+User: beginner
+Assistant: {'message': "Great, Mohamed! Your current fitness level is beginner. Based on your information, I've created a customized exercise plan for you. Your goal is muscle gain, and as a beginner, we'll start with a 3-day split routine. Please find the details below.", 'user_info': {'name': 'Mohamed', 'age': '21', 'height': '187', 'weight': '86', 'BMI': '24.8', 'BMI_case': 'Normal weight', 'fitness_goal': 'Muscle gain', 'fitness_level': 'Beginner'}, 'exercise_plan': {'Monday (Chest and Triceps)': [{'exercise': 'Barbell Bench Press', 'sets': 3, 'reps': 8, 'weight': '70-80 kg'}, {'exercise': 'Incline Dumbbell Press', 'sets': 3, 'reps': 10, 'weight': '40-50 kg'}, {'exercise': 'Tricep Pushdown', 'sets': 3, 'reps': 12, 'weight': '30-40 kg'}], 'Wednesday (Back and Biceps)': [{'exercise': 'Pull-ups', 'sets': 3, 'reps': 8, 'weight': 'bodyweight'}, {'exercise': 'Barbell Rows', 'sets': 3, 'reps': 8, 'weight': '60-70 kg'}, {'exercise': 'Dumbbell Bicep Curls', 'sets': 3, 'reps': 12, 'weight': '20-30 kg'}], 'Friday (Legs and Shoulders)': [{'exercise': 'Squats', 'sets': 3, 'reps': 8, 'weight': '80-90 kg'}, {'exercise': 'Leg Press', 'sets': 3, 'reps': 10, 'weight': '100-120 kg'}, {'exercise': 'Standing Military Press', 'sets': 3, 'reps': 8, 'weight': '40-50 kg'}], 'nutrition_tip': 'To support muscle gain, make sure to consume a caloric surplus of 250-500 calories above your maintenance level, and focus on eating protein-rich foods such as chicken, fish, and eggs.'}}
+

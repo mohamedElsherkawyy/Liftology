@@ -1,12 +1,75 @@
 {
     "user_info": {
-        "name": "",
-        "age": "",
-        "height": "",
-        "weight": "",
-        "fitness_goal": "",
-        "fitness_level": "",
-        "BMI": ""
+        "name": "Mohamed",
+        "age": "21",
+        "height": "187",
+        "weight": "86",
+        "BMI": "24.8",
+        "BMI_case": "Normal weight",
+        "fitness_goal": "Muscle gain",
+        "fitness_level": "Beginner"
     },
-    "exercise_plan": {}
+    "exercise_plan": {
+        "Monday (Chest and Triceps)": [
+            {
+                "exercise": "Barbell Bench Press",
+                "sets": 3,
+                "reps": 8,
+                "weight": "70-80 kg"
+            },
+            {
+                "exercise": "Incline Dumbbell Press",
+                "sets": 3,
+                "reps": 10,
+                "weight": "40-50 kg"
+            },
+            {
+                "exercise": "Tricep Pushdown",
+                "sets": 3,
+                "reps": 12,
+                "weight": "30-40 kg"
+            }
+        ],
+        "Wednesday (Back and Biceps)": [
+            {
+                "exercise": "Pull-ups",
+                "sets": 3,
+                "reps": 8,
+                "weight": "bodyweight"
+            },
+            {
+                "exercise": "Barbell Rows",
+                "sets": 3,
+                "reps": 8,
+                "weight": "60-70 kg"
+            },
+            {
+                "exercise": "Dumbbell Bicep Curls",
+                "sets": 3,
+                "reps": 12,
+                "weight": "20-30 kg"
+            }
+        ],
+        "Friday (Legs and Shoulders)": [
+            {
+                "exercise": "Squats",
+                "sets": 3,
+                "reps": 8,
+                "weight": "80-90 kg"
+            },
+            {
+                "exercise": "Leg Press",
+                "sets": 3,
+                "reps": 10,
+                "weight": "100-120 kg"
+            },
+            {
+                "exercise": "Standing Military Press",
+                "sets": 3,
+                "reps": 8,
+                "weight": "40-50 kg"
+            }
+        ],
+        "nutrition_tip": "To support muscle gain, make sure to consume a caloric surplus of 250-500 calories above your maintenance level, and focus on eating protein-rich foods such as chicken, fish, and eggs."
+    }
 }
