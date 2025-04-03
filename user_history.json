@@ -2,65 +2,65 @@
     "user_info": {
         "name": "Mohamed Motaz",
         "age": "21",
-        "height": "186",
+        "height": "187",
         "weight": "86",
         "BMI": "24.9",
-        "BMI_case": "normal weight",
+        "BMI_case": "Normal weight",
         "fitness_goal": "muscle gain",
         "fitness_level": "beginner"
     },
     "exercise_plan": [
         {
             "day": "Monday",
-            "exercise": "Bench Press",
+            "exercise": "Squats",
             "sets": "3",
-            "reps": "8-12",
-            "weight": "60-70 kg"
+            "reps": "8",
+            "weight": "60kg"
         },
         {
             "day": "Tuesday",
-            "exercise": "Lat Pulldown",
-            "sets": "3",
-            "reps": "10-15",
-            "weight": "40-50 kg"
+            "exercise": "Rest day",
+            "sets": "",
+            "reps": "",
+            "weight": ""
         },
         {
             "day": "Wednesday",
-            "exercise": "Rest Day",
-            "sets": "",
-            "reps": "",
+            "exercise": "Push-ups",
+            "sets": "3",
+            "reps": "10",
             "weight": ""
         },
         {
             "day": "Thursday",
-            "exercise": "Squats",
+            "exercise": "Lunges",
             "sets": "3",
-            "reps": "8-12",
-            "weight": "60-70 kg"
+            "reps": "10",
+            "weight": "50kg"
         },
         {
             "day": "Friday",
-            "exercise": "Lunges",
-            "sets": "3",
-            "reps": "10-15",
-            "weight": "40-50 kg"
-        },
-        {
-            "day": "Saturday",
-            "exercise": "Rest Day",
+            "exercise": "Rest day",
             "sets": "",
             "reps": "",
             "weight": ""
         },
         {
+            "day": "Saturday",
+            "exercise": "Deadlifts",
+            "sets": "3",
+            "reps": "8",
+            "weight": "70kg"
+        },
+        {
             "day": "Sunday",
-            "exercise": "Cardio",
-            "sets": "30-45 minutes",
+            "exercise": "Rest day",
+            "sets": "",
             "reps": "",
             "weight": ""
         },
         {
-            "nutrition_tip": "To support your muscle gain goal, make sure to consume 1.6-2.2 grams of protein per kilogram of body weight daily, and aim for a caloric surplus of 250-500 calories above your maintenance level."
+            "nutrition_tip": "Eat 1.6-2.2 grams of protein per kilogram of body weight daily to support muscle growth"
         }
     ]
 }
