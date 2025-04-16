@@ -12,42 +12,49 @@ USER_INFORAMTION = {
     },
     "exercise_plan": [
         {
-            "day": 1,
+            "day": "Monday",
             "exercise": "",
             "sets": "",
             "reps": "",
             "weight": ""
         },
         {
-            "day": 2,
+            "day": "Tuesday",
             "exercise": "",
             "sets": "",
             "reps": "",
             "weight": ""
         },
         {
-            "day": 3,
+            "day": "Wednesday",
             "exercise": "",
             "sets": "",
             "reps": "",
             "weight": ""
         },
         {
-            "day": 4,
+            "day": "Thursday",
             "exercise": "",
             "sets": "",
             "reps": "",
             "weight": ""
         },
         {
-            "day": 5,
+            "day": "Friday",
             "exercise": "",
             "sets": "",
             "reps": "",
             "weight": ""
         },
         {
-            "day": 6,
+            "day": "Saturday",
+            "exercise": "",
+            "sets": "",
+            "reps": "",
+            "weight": ""
+        },
+        {
+            "day": "Sunday",
             "exercise": "",
             "sets": "",
             "reps": "",
