@@ -1,66 +1,13 @@
 {
     "user_info": {
-        "name": "Mohamed Motaz",
-        "age": "21",
-        "height": "187",
-        "weight": "86",
-        "BMI": "24.9",
-        "BMI_case": "Normal weight",
-        "fitness_goal": "muscle gain",
-        "fitness_level": "beginner"
+        "name": "",
+        "age": 0,
+        "height": 0.0,
+        "weight": 0.0,
+        "BMI": 0.0,
+        "BMI_case": "",
+        "fitness_goal": "",
+        "fitness_level": ""
     },
-    "exercise_plan": [
-        {
-            "day": "Monday",
-            "exercise": "Squats",
-            "sets": "3",
-            "reps": "8",
-            "weight": "60kg"
-        },
-        {
-            "day": "Tuesday",
-            "exercise": "Rest day",
-            "sets": "",
-            "reps": "",
-            "weight": ""
-        },
-        {
-            "day": "Wednesday",
-            "exercise": "Push-ups",
-            "sets": "3",
-            "reps": "10",
-            "weight": ""
-        },
-        {
-            "day": "Thursday",
-            "exercise": "Lunges",
-            "sets": "3",
-            "reps": "10",
-            "weight": "50kg"
-        },
-        {
-            "day": "Friday",
-            "exercise": "Rest day",
-            "sets": "",
-            "reps": "",
-            "weight": ""
-        },
-        {
-            "day": "Saturday",
-            "exercise": "Deadlifts",
-            "sets": "3",
-            "reps": "8",
-            "weight": "70kg"
-        },
-        {
-            "day": "Sunday",
-            "exercise": "Rest day",
-            "sets": "",
-            "reps": "",
-            "weight": ""
-        },
-        {
-            "nutrition_tip": "Eat 1.6-2.2 grams of protein per kilogram of body weight daily to support muscle growth"
-        }
-    ]
+    "exercise_plan": []
 }

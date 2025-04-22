@@ -1,15 +1,18 @@
 import json
 import os
+import random
+import requests
+import re
+import warnings
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from langchain_groq import ChatGroq
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import ChatPromptTemplate
-import warnings
-import re
 
 from config import USER_INFORAMTION
+
 warnings.filterwarnings('ignore')
 load_dotenv()
 
@@ -36,6 +39,7 @@ conversation = ConversationChain(
 
 style = """polite tone that speaks in English , 
 keep the questions direct and concise, asking only for the required details without adding unnecessary conversation."""
+
 system_message = """
 You are a helpful fitness assistant. 
 Ask about each section separately.
@@ -66,66 +70,91 @@ in Style : {style}
 
 conversation_prompt_template = ChatPromptTemplate.from_template(system_message)
 
+# -------- API Utilities --------
+
+def fetch_exercises_from_api(category_name=None, limit=5):
+    url = "https://wger.de/api/v2/exerciseinfo/?language=2&limit=100"
+    response = requests.get(url)
+    data = response.json()["results"]
+
+    if category_name:
+        data = [ex for ex in data if ex['category']['name'].lower() == category_name.lower()]
+    return random.sample(data, min(limit, len(data)))
+
+def generate_nutrition_tip(bmi_case):
+    tips = {
+        "underweight": "Include more healthy calories: nuts, avocados, whole milk, and strength training to build muscle.",
+        "normal": "Maintain a balanced diet with fruits, vegetables, lean protein, and regular exercise.",
+        "overweight": "Reduce sugary and high-fat foods, increase fiber and water intake, and do more cardio.",
+        "obese": "Consult a specialist, cut refined carbs, eat more vegetables and lean protein, and increase daily movement."
+    }
+    return tips.get(bmi_case.lower(), "Eat a balanced diet and stay active.")
+
+# -------- File Writers --------
 
 def create_or_update_json(user_info, exercise_plan):
-    # Combine user_info and exercise_plan into one dictionary
-    combined_data = {
-        "user_info": user_info,
-        "exercise_plan": exercise_plan
-    }
-    
-    # Write the combined data to the JSON file
     with open("user_history.json", "w") as json_file:
-        json.dump(combined_data, json_file, indent=4)
-# Function to create or update the text file
+        json.dump({
+            "user_info": user_info,
+            "exercise_plan": exercise_plan
+        }, json_file, indent=4)
 
 def create_or_update_txt(user_input, assistant_response):       
-    with open("user_conversation.txt", "r+") as f:
-        lines = f.readlines()
-        
-        last_non_empty_line_index = None
-        for i in range(len(lines)-1, -1, -1):
-            if lines[i].strip():  
-                last_non_empty_line_index = i
-                break
-
-        if last_non_empty_line_index is not None:
-            f.seek(0)
-            f.writelines(lines[:last_non_empty_line_index+1])
-            f.write("\n")  
-        else:
-            f.seek(0)
-
+    with open("user_conversation.txt", "a") as f:
         f.write(f"User: {user_input}\n")
-        f.write(f"Assistant: {assistant_response}\n\n")
+        f.write(f"Assistant: {json.dumps(assistant_response, indent=4)}\n\n")
+
+# -------- Chat Endpoint --------
 
 @app.route('/chat', methods=['POST'])
-def chat():
+def chat_endpoint():
     try:
-        user_input = request.json.get("user_input","")
-        
+        user_input = request.json.get("user_input", "")
         if not user_input:
             return jsonify({"error": "No user input provided"}), 400
 
-        user_messages = conversation_prompt_template.format_messages(style=style, text=user_input , object = USER_INFORAMTION)
-
+        user_messages = conversation_prompt_template.format_messages(style=style, text=user_input, object=USER_INFORAMTION)
         response = conversation.run(input=user_messages[0].content)
+
         if isinstance(response, str):
-
-            cleaned_response = re.sub(r'json|', '', response).strip()
+            cleaned_response = re.sub(r'json|```|\\n', '', response).strip()
             response = json.loads(cleaned_response)
-        
-        user_info = response.get("user_info", "") 
-        exercise_plan = response.get("exercise_plan","")
-        
 
-        create_or_update_txt(user_input, response)  
-        create_or_update_json(user_info,exercise_plan) 
+        user_info = response.get("user_info", {})
+        exercise_plan = response.get("exercise_plan", {})
 
-        return jsonify({"assistant_response": response})
+        # ✨ Enhance plan with real API data
+        goal = user_info.get("fitness_goal", "")
+        bmi_case = user_info.get("BMI_case", "")
+        category = "Strength" if "muscle" in goal.lower() else "Cardio"
+        api_exercises = fetch_exercises_from_api(category_name=category, limit=10)
+
+        for day in exercise_plan:
+            chosen = random.choice(api_exercises)
+            exercise_plan[day]["exercise"] = chosen["name"]
+            exercise_plan[day]["description"] = re.sub("<[^<]+?>", "", chosen["description"]) or "General workout"
+
+        # Add nutrition tip
+        exercise_plan["Nutrition Tip"] = generate_nutrition_tip(bmi_case)
+
+        # Save to files
+        create_or_update_txt(user_input, {
+            "user_info": user_info,
+            "exercise_plan": exercise_plan
+        })
+        create_or_update_json(user_info, exercise_plan)
+
+        return jsonify({
+            "assistant_response": {
+                "user_info": user_info,
+                "exercise_plan": exercise_plan
+            }
+        })
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+# -------- Run App --------
 
 if __name__ == '__main__':
     app.run(debug=True)
