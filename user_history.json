@@ -1,11 +1,11 @@
 {
     "user_info": {
-        "name": "",
-        "age": 0,
-        "height": 0.0,
-        "weight": 0.0,
-        "BMI": 0.0,
-        "BMI_case": "",
+        "name": "Mohamed",
+        "age": "21",
+        "height": "186",
+        "weight": "84",
+        "BMI": "24.3",
+        "BMI_case": "Normal weight",
         "fitness_goal": "",
         "fitness_level": ""
     },

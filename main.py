@@ -1,15 +1,19 @@
 import json
 import os
+import warnings
+import re
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from langchain_groq import ChatGroq
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import ChatPromptTemplate
-import warnings
-import re
+from langchain.output_parsers import PydanticOutputParser
+from pydantic import BaseModel, ValidationError
+from typing import List, Union
 
 from config import USER_INFORAMTION
+
 warnings.filterwarnings('ignore')
 load_dotenv()
 
@@ -18,7 +22,6 @@ if not groq_api_key:
     raise ValueError("API key not found in environment variables")
 
 app = Flask(__name__)
-
 memory = ConversationBufferMemory()
 
 chat = ChatGroq(
@@ -29,101 +32,109 @@ chat = ChatGroq(
     api_key=groq_api_key
 )
 
-conversation = ConversationChain(
-    llm=chat,
-    memory=memory
-)
+conversation = ConversationChain(llm=chat, memory=memory)
 
-style = """polite tone that speaks in English , 
+style = """polite tone that speaks in English, 
 keep the questions direct and concise, asking only for the required details without adding unnecessary conversation."""
+
+# --- Pydantic Models ---
+
+class UserInfo(BaseModel):
+    name: str
+    age: Union[str, int]
+    height: Union[str, int, float]
+    weight: Union[str, int, float]
+    BMI: Union[str, int, float]
+    BMI_case: str
+    fitness_goal: str
+    fitness_level: str
+
+class ExerciseDay(BaseModel):
+    day: str
+    exercise: str
+    sets: str
+    reps: str
+    weight: str
+
+class NutritionTip(BaseModel):
+    nutrition_tip: str
+
+class ResponseModel(BaseModel):
+    message: str
+    user_info: UserInfo
+    exercise_plan: List[Union[ExerciseDay, NutritionTip]]
+
+# --- Prompt Template ---
 system_message = """
 You are a helpful fitness assistant. 
 Ask about each section separately.
 
 Move to the next section only when the user has provided all the required details in the current section.
-make sure the response is one big JSON object contains three main keys: the first key is the "message" and the second key is the "user_info" to extract user_info and the third key is "exercise_plan" to store in it the exercises.
+Make sure the response is a valid JSON object.
 
-Ask the users about their name, age, height, weight and calculate the BMI based on BMI predict BMI_case.
-Ask the users about fitness goal , fitness level, and save it in user_info.
-
-use this as a reference :
-
-Chatbot: "Hi there! What is your main fitness goal? (e.g., weight loss, muscle gain, endurance)"
-User: "Muscle gain"
-
-Chatbot: "Great! What is your current fitness level? (e.g., beginner, intermediate, advanced)"
-User: "Intermediate"
-
-### Instructions
-- when he answers all the questions make to him a reasonable customized Exercise plan with a nutrition tip based on his BMI, fitness goal , fitness level.
-- use this object as a reference to fill the keys {object}.
-- this reference {object} you can adjust the days name and you can make some of the days rest day.
+Ask the users about their name, age, height, weight and calculate the BMI, then predict BMI_case.
+Ask the users about fitness goal and fitness level and save them in user_info.
 
 Use this flow to build a personalized plan based on the following user input:
 user input : {text}
-in Style : {style}
+style : {style}
+use this instructions to format your response:
+{format_instructions}
 """
 
 conversation_prompt_template = ChatPromptTemplate.from_template(system_message)
+response_parser = PydanticOutputParser(pydantic_object=ResponseModel)
 
-
+# --- Helpers ---
 def create_or_update_json(user_info, exercise_plan):
-    # Combine user_info and exercise_plan into one dictionary
     combined_data = {
         "user_info": user_info,
         "exercise_plan": exercise_plan
     }
-    
-    # Write the combined data to the JSON file
     with open("user_history.json", "w") as json_file:
         json.dump(combined_data, json_file, indent=4)
-# Function to create or update the text file
 
-def create_or_update_txt(user_input, assistant_response):       
-    with open("user_conversation.txt", "r+") as f:
-        lines = f.readlines()
-        
-        last_non_empty_line_index = None
-        for i in range(len(lines)-1, -1, -1):
-            if lines[i].strip():  
-                last_non_empty_line_index = i
-                break
-
-        if last_non_empty_line_index is not None:
-            f.seek(0)
-            f.writelines(lines[:last_non_empty_line_index+1])
-            f.write("\n")  
-        else:
-            f.seek(0)
-
+def create_or_update_txt(user_input, assistant_response):
+    with open("user_conversation.txt", "a+") as f:
         f.write(f"User: {user_input}\n")
         f.write(f"Assistant: {assistant_response}\n\n")
 
+# --- Flask Route ---
 @app.route('/chat', methods=['POST'])
 def chat():
     try:
-        user_input = request.json.get("user_input","")
-        
+        user_input = request.json.get("user_input", "")
         if not user_input:
             return jsonify({"error": "No user input provided"}), 400
 
-        user_messages = conversation_prompt_template.format_messages(style=style, text=user_input , object = USER_INFORAMTION)
+        format_instructions = response_parser.get_format_instructions()
+        user_messages = conversation_prompt_template.format_messages(
+            style=style,
+            text=user_input,
+            format_instructions=format_instructions
+        )
 
         response = conversation.run(input=user_messages[0].content)
-        if isinstance(response, str):
 
-            cleaned_response = re.sub(r'json|', '', response).strip()
-            response = json.loads(cleaned_response)
-        
-        user_info = response.get("user_info", "") 
-        exercise_plan = response.get("exercise_plan","")
-        
+        # Clean up the JSON response
+        cleaned_response = re.sub(r'```(?:json)?\n?', '', response).strip()
+        cleaned_response = cleaned_response.rstrip("```")
 
-        create_or_update_txt(user_input, response)  
-        create_or_update_json(user_info,exercise_plan) 
+        response_json = json.loads(cleaned_response)
 
-        return jsonify({"assistant_response": response})
+        # Validate with Pydantic
+        parsed_response = ResponseModel.parse_obj(response_json)
 
+        user_info = parsed_response.user_info.dict()
+        exercise_plan = [item.dict() for item in parsed_response.exercise_plan]
+
+        create_or_update_txt(user_input, cleaned_response)
+        create_or_update_json(user_info, exercise_plan)
+
+        return jsonify({"assistant_response": parsed_response.dict()})
+
+    except ValidationError as ve:
+        return jsonify({"error": "Response validation failed", "details": ve.errors()}), 500
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
